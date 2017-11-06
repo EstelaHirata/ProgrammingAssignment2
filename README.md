@@ -88,7 +88,8 @@ Write the following functions:
  	setinverse <- function(i) inverse <- i
  	getinverse <- function() inverse
  	list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
-  }
+ 
+ }
   
 2.  `cacheSolve`: This function computes the inverse of the special
     "matrix" returned by `makeCacheMatrix` above. If the inverse has
@@ -109,6 +110,7 @@ cacheSolve <- function(x, ...){
                 inverse <- solve(data, ...)
                 x$setinverse(inverse)
                 inverse
+
 }
             
             # data <- matrix(c(1, 1, 4, 0, 3, 1, 4, 4, 0), nrow=3, ncol=3)
