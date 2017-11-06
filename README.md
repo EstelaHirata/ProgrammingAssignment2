@@ -98,19 +98,19 @@ Write the following functions:
 ## Write a short comment describing this function
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-        +        inverse <- x$getinverse()
-        +        if(!is.null(inverse)) {
-                +        	message("getting cached inverse")
-                +        	return(inverse)
-                +        }
-        +        data <- x$get()
-        +        inverse <- solve(data, ...)
-        +        x$setinverse(inverse)
-        +        inverse
+## Return a matrix that is the inverse of 'x'
+            inverse <- x$getinverse()
+            if(!is.null(inverse)) {
+    	    message("getting cached inverse")
+        	return(inverse)
+                }
+                data <- x$get()
+                inverse <- solve(data, ...)
+                x$setinverse(inverse)
+                inverse
 }
-+
-        +# data <- matrix(c(1, 1, 4, 0, 3, 1, 4, 4, 0), nrow=3, ncol=3)
+
+        # data <- matrix(c(1, 1, 4, 0, 3, 1, 4, 4, 0), nrow=3, ncol=3)
 
 Computing the inverse of a square matrix can be done with the `solve`
 function in R. For example, if `X` is a square invertible matrix, then
